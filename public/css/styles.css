@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  border-radius: 0;
+  margin: 0;
+}
+
+.navbar-dark .navbar-brand {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  height: 100%;
+}
+
+.navbar-collapse.collapse {
+  margin-top: 4px;
+}
+
+.movie-title {
+  max-width: 200px;
+  font-size: 1.5vw;
+  flex-wrap: nowrap;
+}
+
+.hero-img {
+  padding: 0;
+}
+
+.img-fluid {
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  width: 110%;
+  
+}
