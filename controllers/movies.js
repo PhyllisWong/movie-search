@@ -1,13 +1,12 @@
-/* eslint-disable no-console */
 // controllers/movies.js
 const MovieDb = require('moviedb-promise');
+
 const moviedb = new MovieDb(process.env.SECRET_KEY);
 
 module.exports = (app) => {
-
   // Index
   app.get('/', (req, res) => {
-    let params = {
+    const params = {
       query: '',
       language: 'en', // ISO 639-1 code
     };
@@ -20,7 +19,7 @@ module.exports = (app) => {
       moviedb.searchMovie(params)
         .then((response) => {
           res.render('movies/movies-index', {
-            movies: response.results
+            movies: response.results,
           });
         })
         .catch(console.error);
@@ -38,7 +37,7 @@ module.exports = (app) => {
 
   // MOVIE DETAIL
   app.get('/movies/:id', (req, res) => {
-    let params = {
+    const params = {
       query: '',
       language: 'en', // ISO 639-1 code
     };
@@ -51,7 +50,7 @@ module.exports = (app) => {
       moviedb.searchMovie(params)
         .then((response) => {
           res.render('movies/movies-index', {
-            movies: response.results
+            movies: response.results,
           });
         })
         .catch(console.error);
