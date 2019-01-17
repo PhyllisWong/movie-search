@@ -4,6 +4,8 @@ const MovieDb = require('moviedb-promise');
 const moviedb = new MovieDb(process.env.SECRET_KEY);
 
 module.exports = (app) => {
+
+  // Index
   app.get('/', (req, res) => {
     let params = {
       query: '',
@@ -30,5 +32,17 @@ module.exports = (app) => {
         })
         .catch(console.error);
     }
+  });
+
+  app.get('/movies/:id', (req, res) => {
+    moviedb.movieInfo(req.params.id)
+      .then((movie) => {
+        res.render('movies/movies-show', { movie });
+      })
+      .catch((err) => {
+        if (err) {
+          console.log('Error getting movie details', err.message);
+        }
+      });
   });
 };
