@@ -1,14 +1,9 @@
 <!-- views/movies/movies-index.hbs -->
 
-<div class="container">
-
-  <div class="container-title">
-    <h1>Now Playing</h1>
-  </div>
-
+<div class="container movie-container">
   <div class="row">
     {{#each movies}}
-    <div class="col-md-3">
+    <div class="col-md-2 movie-card">
       <h2 class="movie-title">{{this.title}}</h2>
       <a href="/movies/{{this.id}}">
         <img src="https://image.tmdb.org/t/p/w200/{{this.poster_path}}">

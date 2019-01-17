@@ -2,14 +2,16 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4 show-movie-img">
       <a href="/"><img class="img-responsive" src="https://image.tmdb.org/t/p/w400/{{movie.poster_path}}"></a>
     </div>
     <div class="col-sm-8">
-      <h1>{{movie.title}}</h1>
-      <p class="lead">{{movie.overview}}</p>
-      <p>release date: <span>{{movie.release_date}}</span></p>
-      <p>movie poularity: <span>{{movie.popularity}}</span></p>
+      <h1 class="show-movie-title">{{movie.title}}</h1>
+      <p class="movie-overview">{{movie.overview}}</p>
+      <div class="movie-data">
+        <p>release date: <span>{{movie.release_date}}</span></p>
+        <p>movie poularity: <span>{{movie.popularity}}</span></p>
+      </div>
     </div>
   </div>
 </div>
