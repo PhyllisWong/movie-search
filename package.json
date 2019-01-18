@@ -2,7 +2,7 @@
   "name": "movie-search",
   "version": "1.0.0",
   "description": "A simple API to search MovieDb",
-  "main": "sever.js",
+  "main": "server.js",
   "scripts": {
     "test": "mocha",
     "start": "node server.js"
