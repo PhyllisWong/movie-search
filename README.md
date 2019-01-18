@@ -34,7 +34,7 @@ The API runs on port ````3000```` by default.
 
 
 ### Testing
-This API currently has 100% routes coverage.
+This API currently has 100% test coverage.
 
 To run the tests:
 
